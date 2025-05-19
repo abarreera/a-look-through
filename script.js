@@ -59,3 +59,25 @@ document.addEventListener('fullscreenchange', () => {
       note.style.display = 'block';
     }
   });
+
+document.getElementById('fullscreenBtn').addEventListener('click', () => {
+  const el = document.documentElement;
+
+  if (el.requestFullscreen) {
+    el.requestFullscreen();
+  } else if (el.webkitRequestFullscreen) {
+    el.webkitRequestFullscreen();
+  } else if (el.msRequestFullscreen) {
+    el.msRequestFullscreen();
+  }
+});
+
+document.addEventListener('fullscreenchange', () => {
+  const btn = document.getElementById('fullscreenBtn');
+  if (document.fullscreenElement && btn) {
+    btn.style.display = 'none'; // Oculta el botón en fullscreen
+  } else if (btn) {
+    btn.style.display = 'block'; // Muestra de nuevo al salir de fullscreen
+  }
+});
+
