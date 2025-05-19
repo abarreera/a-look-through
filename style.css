@@ -10,16 +10,17 @@
       height: 100%;
       width: 100%;
     }
-    #note {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 10px 20px;
-      font-size: 20px;
-      max-width: 80%;
-       z-index: 9999;
-      border-radius: 10px;
-    }
+   #note {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
+  max-width: 80%;
+  z-index: 9999;
+  border-radius: 10px;
+  pointer-events: none; /* (opcional) para que no bloquee clics debajo */
+}
