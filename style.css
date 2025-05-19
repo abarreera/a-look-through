@@ -7,9 +7,12 @@
       background-color: black;
     }
     #street-view {
-      height: 100%;
-      width: 100%;
-    }
+  width: 100vw;
+  height: 100vh;
+  position: relative; /* permite que elementos externos se ubiquen bien */
+  z-index: 1;
+}
+
 #note {
   position: absolute;
   bottom: 30px;
