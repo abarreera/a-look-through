@@ -42,4 +42,20 @@
       setTimeout(cycleLocations, 10000); // cambia cada 10 segundos
     }
 
+
     window.onload = startViewer;
+
+document.addEventListener('fullscreenchange', () => {
+    const note = document.getElementById('note');
+    if (note) {
+      note.style.display = 'block'; // vuelve a mostrar la nota si se oculta
+    }
+  });
+
+  // Por si Google usa prefijos antiguos (algunos navegadores)
+  document.addEventListener('webkitfullscreenchange', () => {
+    const note = document.getElementById('note');
+    if (note) {
+      note.style.display = 'block';
+    }
+  });
