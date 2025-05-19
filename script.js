@@ -42,7 +42,6 @@ firebase.initializeApp(firebaseConfig);
       setTimeout(cycleLocations, 10000); // cambia cada 10 segundos
     }
 
-    window.onload = startViewer;
 
     window.onload = startViewer;
 
