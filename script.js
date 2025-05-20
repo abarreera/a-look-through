@@ -39,7 +39,7 @@ firebase.initializeApp(firebaseConfig);
         document.getElementById("note").textContent = loc.note || "Sin nota";
 
       currentIndex = (currentIndex + 1) % locations.length;
-      setTimeout(cycleLocations, 10000); // cambia cada 10 segundos
+      setTimeout(cycleLocations, 12000); // cambia cada 10 segundos
     }
 
 
